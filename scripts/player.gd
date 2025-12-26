@@ -31,6 +31,14 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			player_sprites.play("idle")
 	else:
+		if direction == -1:
+			velocity.x = direction * SPEED
+			player_sprites.flip_h = true
+			player_sprites.play("walk")
+		elif direction == 1:
+			velocity.x = direction * SPEED
+			player_sprites.flip_h = false
+			player_sprites.play("walk")
 		player_sprites.play("jump")
 
 	move_and_slide()

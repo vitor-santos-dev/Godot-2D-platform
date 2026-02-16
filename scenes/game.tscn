@@ -3,16 +3,36 @@
 [ext_resource type="PackedScene" uid="uid://c1kw0atlb0qjd" path="res://entities/player.tscn" id="1_uwrxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
-size = Vector2(183.25, 25.625)
+size = Vector2(73.8125, 39.8125)
 
 [node name="game" type="Node2D"]
 position = Vector2(-138, -401)
 
 [node name="floor" type="StaticBody2D" parent="."]
-position = Vector2(182, 495)
+position = Vector2(174, 597)
 
 [node name="floor-collision" type="CollisionShape2D" parent="floor"]
 shape = SubResource("RectangleShape2D_lnu2h")
 
+[node name="floor-collision2" type="CollisionShape2D" parent="floor"]
+position = Vector2(89, -20)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="floor-collision3" type="CollisionShape2D" parent="floor"]
+position = Vector2(177, -38)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="floor-collision4" type="CollisionShape2D" parent="floor"]
+position = Vector2(263, -57)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="floor-collision5" type="CollisionShape2D" parent="floor"]
+position = Vector2(351, -73)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="floor-collision6" type="CollisionShape2D" parent="floor"]
+position = Vector2(437, -84)
+shape = SubResource("RectangleShape2D_lnu2h")
+
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(154, 474)
+position = Vector2(499, 492)
